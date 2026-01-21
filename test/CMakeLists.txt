@@ -1,5 +1,7 @@
 set(DATA_DIR ${CMAKE_CURRENT_LIST_DIR}/integration)
 
+find_package(doctest CONFIG REQUIRED)
+
 add_test(
   NAME integration_empty
   COMMAND ${CMAKE_COMMAND}
@@ -11,7 +13,7 @@ add_test(
 )
 
 add_executable(unit_stub unit_stub.cpp)
-target_link_libraries(unit_stub stub)
+target_link_libraries(unit_stub PRIVATE stub doctest::doctest)
 
 target_include_directories(unit_stub PRIVATE ${CMAKE_SOURCE_DIR}/src)
 

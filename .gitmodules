@@ -1,0 +1,6 @@
+[submodule "ext/doctest"]
+	path = ext/doctest
+	url = git@github.com:doctest/doctest.git
+[submodule "ext/nanobench"]
+	path = ext/nanobench
+	url = git@github.com:martinus/nanobench.git
